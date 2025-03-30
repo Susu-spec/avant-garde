@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Play:wght@400;700&display=swap" rel="stylesheet">
     <meta name="description" content="Pick one out of 10 variations">
     <meta name="keywords" content="E-commerce, Fashion, Art" >
     <meta name="author" content="Suwaibat Suleiman">
@@ -17,6 +18,60 @@
 
 </head>
 <body>
+    <header>
+        <nav>
+            <h1>Avant Garde</h1>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img id='selected-variation' src="" alt="" />
+        </section>
+        <section>
+            <h1>Crash Bomber Tan</h1>
+            <p>₦2,083,200.00 NGN</p>
+            <p>Tax included</p>
+            <div id="button-container" class="flex items-center justify-center">
+                <fieldset>
+                    <legend>Size</legend>
+                    <input type="radio" id="button_1" />
+                    <label for="button_1">XXS</label>
+
+                    <input type="radio" id="button_2" />
+                    <label for="button_2">XS</label>
+
+                    <input type="radio" id="button_3" />
+                    <label for="button_3">S</label>
+
+                    <input type="radio" id="button_4" />
+                    <label for="button_4">M</label>
+
+                    <input type="radio" id="button_5" />
+                    <label for="button_5">L</label>
+
+                    <input type="radio" id="button_6" />
+                    <label for="button_6">XL</label>
+
+                    <input type="radio" id="button_7" />
+                    <label for="button_7">XXL</label>
+
+                    <input type="radio" id="button_8" />
+                    <label for="button_8">4XL</label>
+
+
+                    <input type="radio" id="button_9" />
+                    <label for="button_9">5XL</label>
+
+                    <input type="radio" id="button_10" />
+                    <label for="button_10">6XL</label>
+                </fieldset>
+            </div>
+            <div>
+                <button id="add-to-cart">Add to Cart</button>
+                <button id="checkout-button">Buy Now</button>
+            </div>
+        </section>
+    </main>
     
 </body>
 </html>
