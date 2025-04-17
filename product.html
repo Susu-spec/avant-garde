@@ -20,53 +20,61 @@
 <body>
     <header>
         <nav>
-            <h1>Avant Garde</h1>
+            <h1 class="avant-header text-center">Avant Garde</h1>
         </nav>
     </header>
-    <main>
-        <section>
-            <img id='selected-variation' src="" alt="" />
+    <main class="main-product-section">
+        <section class="image-section">
+            <img id='selected-variation' src="./assets/Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg" alt="" style="height: auto; width: 37.5rem; border-radius: 2rem;"/>
         </section>
-        <section>
-            <h1>Crash Bomber Tan</h1>
-            <p>₦2,083,200.00 NGN</p>
-            <p>Tax included</p>
-            <div id="button-container" class="flex items-center justify-center">
-                <fieldset>
-                    <legend>Size</legend>
-                    <input type="radio" id="button_1" />
-                    <label for="button_1">XXS</label>
-
-                    <input type="radio" id="button_2" />
-                    <label for="button_2">XS</label>
-
-                    <input type="radio" id="button_3" />
-                    <label for="button_3">S</label>
-
-                    <input type="radio" id="button_4" />
-                    <label for="button_4">M</label>
-
-                    <input type="radio" id="button_5" />
-                    <label for="button_5">L</label>
-
-                    <input type="radio" id="button_6" />
-                    <label for="button_6">XL</label>
-
-                    <input type="radio" id="button_7" />
-                    <label for="button_7">XXL</label>
-
-                    <input type="radio" id="button_8" />
-                    <label for="button_8">4XL</label>
-
-
-                    <input type="radio" id="button_9" />
-                    <label for="button_9">5XL</label>
-
-                    <input type="radio" id="button_10" />
-                    <label for="button_10">6XL</label>
-                </fieldset>
+        <section class="checkout-info-section">
+            <h1>Marcel Duchamp's Fountain</h1>
+            <div class="price">
+                <p>₦2,083,200.00 NGN</p>
+                <span>Tax included</span>
             </div>
-            <div>
+            <div id="button-container" class="select-containers">
+                <div class="select-buttons">
+                    <h3 class="">Duchamp's reproductions</h3>
+                
+                    <label for="button_1">
+                        <input type="radio" id="button_1" name="reproductions" value="papier_mache"/>
+                        Papier-mâché reproduction
+                    </label>
+                    <label for="button_2">
+                        <input type="radio" id="button_2" name="reproductions" value="porcelain"/>
+                        Porcelain reproduction
+                    </label>
+                    <label for="button_3">
+                        <input type="radio" id="button_3" name="reproductions" value="stieglitz_photo"/>
+                        Alfred Stieglitz's photo of the original work
+                    </label>
+                    <label for="button_4">
+                        <input type="radio" id="button_4" name="reproductions" value="duchamp_illustration"/>
+                        Duchamp's illustration of Stieglitz's photo
+                    </label>
+                </div>
+               
+                <div class="select-buttons">
+                    <h3 class="">Duchamp's authorized reproductions</h3>
+                
+                    <label for="button_5">
+                        <input type="radio" id="button_1" name="reproductions" value="galleria_schwarz"/>
+                        1 version of the Galleria Schwarz edition
+                    </label>
+                    <label for="button_6">
+                        <input type="radio" id="button_2" name="reproductions" value="ulf_linde_fountain"/>
+                        Ulf Linde's version
+                    </label>
+                    <label for="button_7">
+                        <input type="radio" id="button_3" name="reproductions" value="sidney_janis_fountain"/>
+                        Sidney Janis' request
+                    </label>
+                </div>
+             
+
+            </div>
+            <div class="checkout-info-buttons">
                 <button id="add-to-cart">Add to Cart</button>
                 <button id="checkout-button">Buy Now</button>
             </div>
