@@ -19,37 +19,100 @@
 <body>
     <header>
         <nav>
-            Avant Garde
+            <h1 class="avant-header text-center">Avant Garde</h1>
         </nav>
     </header>
-    <main>
+    <main  class="main-checkout-section">
         <section>
+            <p>Express checkout</p>
+            <div>
+                
+                <button></button>
+                <button></button>
+            </div>
+            <p>OR</p>
             <form action="submit">
                 <fieldset>
                     <legend>Contact</legend>
                     <input type="text" id="email" name="email" placeholder="Email" required>
+                    <label><input type="checkbox" name="email_me"/> Email me with news and offers</label>
                 </fieldset>
-            </form>
-        </section>
-        <section>
-            <h1>Order Summary</h1>
-            <div>
                 <div>
-                    <img src="" alt="" />
-                    <p>
-                        <span>Crash Bomber Tan</span>
-                        <span>XL</span>
+                    <div>
+                        <input type="text" name="first_name" placeholder="First name"/>
+                        <input type="text" name="last_name" placeholder="Last name"/>
+                    </div>
+                    <input type="text" name="address" placeholder="Address" />
+                    <input type="text" name="further_address" placeholder="Apartment, suite, etc. (optional)" />
+                    <div>
+                        <input type="text" name="postal_code" placeholder="Postal code"/>
+                        <input type="text" name="city" placeholder="City"/>
+                    </div>
+                    <input type="text" name="phone" placeholder="Phone" />
+                </div>
+                <div>
+                    <p>Shipping method</p>
+                    <input type="text" name="shipping_method" value="Tracked" />
+                    <label>MAD 502.00</label>
+                </div>
+                <div>
+                    <p>Payment</p>
+                    <p>All transactions are secure and encrypted</p>
+                    <div>
+                        <p>Credit card</p>
+                        <input type="text" name="card_number" placeholder="Card number" />
+                        <div>
+                            <input type="text" name="expiration_date" placeholder="Expiration Date (MM/ YY)" />
+                            <input type="text" name="security_code" placeholder="Security code" />
+                        </div>
+                        <input type="text" name="name_on_card" placeholder="Name on card" />
+                        <label>
+                            <input type="checkbox" name="shipping_address" />
+                            Use shipping address as billing address
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <p>Remember me</p>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="save_info" />
+                            Save my information for a faster checkout with a Shop account
+                        </label>
+                        <input type="text" name="mobile" value="+234" placeholder="Mobile phone number"/>
+                    </div>
+                </div>
+                <button type="submit">Review order</button>
+                <p>Your info will be saved to a Shop account. By continuing, you agree to Shop’s <span>Terms of Service</span> and acknowledge the <span>Privacy Policy</span>.</p>
+            </form>
+           <ul>
+            <a>Refund policy</a>
+            <a>Privacy policy</a>
+            <a>Terms of service</a>
+            <a>Contact information</a>
+            <a>Cookie preferences</a>
+           </ul>
+        </section>
+        <section class="order-summary-section">
+            <h1>Order Summary</h1>
+            <div class="order-info">
+                <div>
+                    <img id='selected-variation' src="./assets/Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg" alt="" style="height: 8.5rem; width: 8.5rem; border-radius: 2rem;"/>
+                    <p class="justify-between">
+                        <span>Marcel Duchamp's <italic>Fountain</italic></span> - 
+                        (<span id="selected-variation" class="font-bold">Papier-mâché reproduction</span>)
+                        
                     </p>
                 </div>
                 <p>₦2,083,200.00</p>
             </div>
-            <div>
-                <div>
+            <div class="total-payment-info">
+                <div class="sub-payment-info info-labels">
                     <p>SubTotal</p>
                     <p>Shipping</p>
                     <p>Total</p>
                 </div>
-                <div>
+                <div class="sub-payment-info right-side">
                     <p>₦2,083,300.00</p>
                     <p>₦52,700.00</p>
                     <p>NGN ₦2,136,000.00</p>
