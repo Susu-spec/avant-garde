@@ -13,7 +13,13 @@
 body {
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 2rem;
+}
+
+header {
+    width: 100%;
 }
 
 nav {
@@ -24,24 +30,90 @@ nav {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
 .text-center {
     text-align: center;
 }
 
-.avant-header {
-    font-size: 3.5rem;
-    width: 100%;
+.text-xs {
+    font-size: .75rem;
 }
 
-.main-product-section {
+.right-side {
+    text-align: right;
+}
+
+.font-semibold {
+    font-weight: 600;
+    font-size: .75rem;
+}
+
+.font-bold {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.flex-row {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.border-bottom {
+    border-bottom: 1px solid gray;
+}
+
+.avant-header {
+    font-size: 4vw;
+    width: 100%;
+    transition: font-size 0.3s ease;
+}
+
+.avant-header.shrunk {
+    font-size: 2.5vw;
+}
+
+.main-product-page {
     width: 100%;
     max-width: 90%;
     margin: 2.5rem auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 3rem;
     cursor: default;
     margin-top: 1rem;
+}
+
+.main-checkout-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+    height: 100dvh;
 }
 
 .image-section {
@@ -61,7 +133,7 @@ nav {
     font-size: 2.5rem;
 }
 
-.checkout-info-section .buttons button {
+.buttons button {
     padding: .5rem 1rem;
     cursor: pointer;
 }
@@ -101,7 +173,9 @@ nav {
     gap: 1rem;
 }
 
-.checkout-info-buttons button {
+.checkout-info-buttons button,
+.express-buttons button,
+.review-order-button {
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     width: 100%;
     padding: .5rem 1rem;
@@ -110,15 +184,27 @@ nav {
     font-weight: 600;
 }
 
+.express-buttons button {
+    color: black;
+    background-color: oldlace;
+    outline: 0;
+    border: 0;
+    border-radius: .5rem;
+}
 
-.main-checkout-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    max-width: 90%;
+.avant-checkout-header {
+    position: relative;
+    display: flex;
+    width: 90%;
     margin: 0 auto;
-    height: 100dvh;
+    justify-content: left;
+    font-size: 1rem;
+}
+
+.avant-checkout-header h1 {
+    padding-bottom: .5rem;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .cart-add a {
@@ -155,11 +241,106 @@ nav {
     font-weight: 600;
 }
 
-.right-side {
-    text-align: right;
+.form-flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.575rem;
 }
 
-.font-bold {
+.pseudo-input {
+    border: 1px solid gray;
+    padding: .75rem;
+    line-height: 1.25rem;
+    box-sizing: border-box;
+    appearance: none;
+    border-radius: .5rem;
+    width: 100%;
+    position: relative;
+}
+
+.pseudo-input input {
+    outline: 0;
+    border: 0;
+    width: 80%;
+}
+
+.pseudo-input:after {
+    content : "MAD 502.00";
+    position: absolute;
+    right: .5rem;
+}
+
+.checkout-input {
+    padding: .75rem;
+    width: 100%;
+    border-radius: .5rem;
+    border-color: gray;
+    border-width: .1rem;
+}
+
+.checkout-input:focus-visible,
+.checkout-input:focus {
+    outline: 0;
+}
+
+.card {
+    background-color: hsla(0, 0%, 0%, .045);
+    padding: .5rem .75rem;
+    border-radius: .575rem;
+}
+
+.card p {
     font-weight: 600;
-    font-size: .75rem;
+}
+
+.link-list {
+    display: flex;
+    gap: .75rem;
+    margin-bottom: 2rem;
+}
+
+.link-list a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.main-product-image {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 56.25rem) {
+    .image-section {
+        max-width: 100%;
+    }
+
+    .mobile-image {
+        width: 100%;
+        min-height: 28rem;
+    }
+
+    .mobile-flex-row {
+        flex-direction: row;
+    }
+
+    .mobile-flex-col {
+        flex-direction: column;
+    }
+
+    .main-product-page,
+    .main-checkout-page {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-info-section {
+        gap: 1rem;
+    }
+
+    .checkout-info-section h1 {
+        font-size: 2rem;
+    }
 }
