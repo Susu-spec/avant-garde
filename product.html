@@ -15,7 +15,7 @@
   
     <meta property="og:title" content="Avant Garde">
     <meta property="og:description" content="Pick one out of 10 variations">
-
+  
 </head>
 <body>
     <header>
@@ -23,9 +23,9 @@
             <h1 class="avant-header text-center">Avant Garde</h1>
         </nav>
     </header>
-    <main class="main-product-section">
+    <main class="main-product-page">
         <section class="image-section">
-            <img id='selected-variation' src="./assets/Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg" alt="" style="height: auto; width: 37.5rem; border-radius: 2rem;"/>
+            <img id='selected-variation' src="./assets/Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg" alt="Alfred Stieglitz's photo of the original Fountain by Marcel Duchamp" class="main-product-image mobile-image"/>
         </section>
         <section class="checkout-info-section">
             <h1>Marcel Duchamp's Fountain</h1>
@@ -33,7 +33,7 @@
                 <p>₦2,083,200.00 NGN</p>
                 <span>Tax included</span>
             </div>
-            <div id="button-container" class="select-containers">
+            <form id="button-container" class="select-containers">
                 <div class="select-buttons">
                     <h3 class="">Duchamp's reproductions</h3>
                 
@@ -59,21 +59,21 @@
                     <h3 class="">Duchamp's authorized reproductions</h3>
                 
                     <label for="button_5">
-                        <input type="radio" id="button_1" name="reproductions" value="galleria_schwarz"/>
+                        <input type="radio" id="button_5" name="reproductions" value="galleria_schwarz"/>
                         1 version of the Galleria Schwarz edition
                     </label>
                     <label for="button_6">
-                        <input type="radio" id="button_2" name="reproductions" value="ulf_linde_fountain"/>
+                        <input type="radio" id="button_6" name="reproductions" value="ulf_linde_fountain"/>
                         Ulf Linde's version
                     </label>
                     <label for="button_7">
-                        <input type="radio" id="button_3" name="reproductions" value="sidney_janis_fountain"/>
+                        <input type="radio" id="button_7" name="reproductions" value="sidney_janis_fountain"/>
                         Sidney Janis' request
                     </label>
                 </div>
              
 
-            </div>
+            </form>
             <div class="checkout-info-buttons">
                 <button onclick="location.href='/checkout.html'" id="add-to-cart" class="cart-add" >Add to Cart
                 </button>
@@ -81,6 +81,31 @@
             </div>
         </section>
     </main>
-    
+    <script >
+        const form = document.getElementById('button-container');
+        const reproductions = document.getElementsByName('reproductions');
+
+        reproductions.forEach((radio) => {
+            radio.addEventListener('change', function () {
+            if (this.checked) {
+                const label = document.querySelector(`label[for="${this.id}"]`);
+                const labelText = label ? label.textContent.trim() : null;
+                localStorage.setItem('selectedVariation', labelText);
+            }
+            });
+        });
+
+        let isShrunk = false;
+        window.addEventListener('scroll', function () {
+        const header = document.querySelector('.avant-header');
+        if (window.scrollY > 100 && !isShrunk) {
+            header.classList.add('shrunk');
+            isShrunk = true;
+        } else if (window.scrollY <= 100 && isShrunk) {
+            header.classList.remove('shrunk');
+            isShrunk = false;
+        }
+        });
+    </script>
 </body>
 </html>
