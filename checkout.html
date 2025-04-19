@@ -17,90 +17,87 @@
     <meta property="og:description" content="Pick one out of 10 variations">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1 class="avant-header text-center">Avant Garde</h1>
+    <header class="border-bottom">
+        <nav class="avant-checkout-header">
+            <h1><a href="/product.html" class="pointer">AVANT GARDE</a></h1>
         </nav>
     </header>
-    <main  class="main-checkout-section">
-        <section>
-            <p>Express checkout</p>
-            <div>
-                
-                <button></button>
-                <button></button>
+    <main class="main-checkout-page">
+        <section class="form-flex-col">
+            <div class="flex-col">
+                <p class="font-bold">Express checkout</p>
+                <div class="express-buttons flex-row"> 
+                    <button>Shop pay</button>
+                    <button>Google pay</button>
+                </div>
             </div>
             <p>OR</p>
-            <form action="submit">
-                <fieldset>
-                    <legend>Contact</legend>
-                    <input type="text" id="email" name="email" placeholder="Email" required>
-                    <label><input type="checkbox" name="email_me"/> Email me with news and offers</label>
-                </fieldset>
-                <div>
-                    <div>
-                        <input type="text" name="first_name" placeholder="First name"/>
-                        <input type="text" name="last_name" placeholder="Last name"/>
-                    </div>
-                    <input type="text" name="address" placeholder="Address" />
-                    <input type="text" name="further_address" placeholder="Apartment, suite, etc. (optional)" />
-                    <div>
-                        <input type="text" name="postal_code" placeholder="Postal code"/>
-                        <input type="text" name="city" placeholder="City"/>
-                    </div>
-                    <input type="text" name="phone" placeholder="Phone" />
+            <form action="submit" class="form-flex-col">
+                <div class="flex-col">
+                    <legend class="font-bold">Contact</legend>
+                    <input type="email" id="email" name="email" placeholder="Email" class="checkout-input" required>
+                    <label class="text-xs"><input type="checkbox" name="email_me" class="pointer"/> Email me with news and offers</label>
                 </div>
-                <div>
-                    <p>Shipping method</p>
-                    <input type="text" name="shipping_method" value="Tracked" />
-                    <label>MAD 502.00</label>
+                <div class="flex-col">
+                    <div class="flex-row">
+                        <input type="text" class="checkout-input" name="first_name" placeholder="First name"/>
+                        <input type="text" class="checkout-input" name="last_name" placeholder="Last name"/>
+                    </div>
+                    <input type="text" class="checkout-input" name="address" placeholder="Address" />
+                    <input type="text" class="checkout-input" name="further_address" placeholder="Apartment, suite, etc. (optional)" />
+                    <div class="flex-row">
+                        <input type="text" class="checkout-input" name="postal_code" placeholder="Postal code"/>
+                        <input type="text" class="checkout-input" name="city" placeholder="City"/>
+                    </div>
+                    <input type="text" class="checkout-input" name="phone" placeholder="Phone" />
                 </div>
-                <div>
-                    <p>Payment</p>
-                    <p>All transactions are secure and encrypted</p>
-                    <div>
-                        <p>Credit card</p>
-                        <input type="text" name="card_number" placeholder="Card number" />
-                        <div>
-                            <input type="text" name="expiration_date" placeholder="Expiration Date (MM/ YY)" />
-                            <input type="text" name="security_code" placeholder="Security code" />
+                <div class="flex-col">
+                    <p class="font-bold">Shipping method</p>
+                    
+                    <div class="pseudo-input">
+                        <input type="text" name="shipping_method" value="Tracked" />
+                    </div>
+                </div>
+                <div class="flex-col">
+                    <p class="font-bold">Payment</p>
+                    <p class="text-xs">All transactions are secure and encrypted</p>
+                    <div class="flex-col card">
+                        <p >Credit card</p>
+                        <input type="text" name="card_number" placeholder="Card number" class="checkout-input"/>
+                        <div class="flex-row">
+                            <input type="text" name="expiration_date" placeholder="Expiration Date (MM/ YY)" class="checkout-input"/>
+                            <input type="text" name="security_code" placeholder="Security code" class="checkout-input"/>
                         </div>
-                        <input type="text" name="name_on_card" placeholder="Name on card" />
-                        <label>
-                            <input type="checkbox" name="shipping_address" />
+                        <input type="text" name="name_on_card" placeholder="Name on card" class="checkout-input"/>
+                        <label class="text-xs">
+                            <input type="checkbox" name="shipping_address" class="pointer"/>
                             Use shipping address as billing address
                         </label>
                     </div>
                 </div>
-                <div>
+                <div class="flex-col card">
                     <p>Remember me</p>
-                    <div>
-                        <label>
-                            <input type="checkbox" name="save_info" />
+                    <div class="flex-col">
+                        <label class="text-xs">
+                            <input type="checkbox" name="save_info" class="pointer"/>
                             Save my information for a faster checkout with a Shop account
                         </label>
-                        <input type="text" name="mobile" value="+234" placeholder="Mobile phone number"/>
+                        <input type="number" name="mobile" value="+234" placeholder="Mobile phone number" class="checkout-input"/>
+                       
                     </div>
                 </div>
-                <button type="submit">Review order</button>
-                <p>Your info will be saved to a Shop account. By continuing, you agree to Shop’s <span>Terms of Service</span> and acknowledge the <span>Privacy Policy</span>.</p>
+               
             </form>
-           <ul>
-            <a>Refund policy</a>
-            <a>Privacy policy</a>
-            <a>Terms of service</a>
-            <a>Contact information</a>
-            <a>Cookie preferences</a>
-           </ul>
+          
         </section>
         <section class="order-summary-section">
             <h1>Order Summary</h1>
             <div class="order-info">
-                <div>
+                <div class="flex-col">
                     <img id='selected-variation' src="./assets/Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg" alt="" style="height: 8.5rem; width: 8.5rem; border-radius: 2rem;"/>
                     <p class="justify-between">
                         <span>Marcel Duchamp's <italic>Fountain</italic></span> - 
-                        (<span id="selected-variation" class="font-bold">Papier-mâché reproduction</span>)
+                        (<span id="selected-variation-text" class="font-semibold"></span>)
                         
                     </p>
                 </div>
@@ -119,6 +116,26 @@
                 </div>
             </div>
         </section>
+        <div class="form-flex-col">
+            <button type="submit" class="review-order-button">Review order</button>
+            <p class="text-xs">Your info will be saved to a Shop account. By continuing, you agree to Shop’s <span>Terms of Service</span> and acknowledge the <span>Privacy Policy</span>.</p>
+            <ul class="text-xs link-list">
+                <a href="/product.html">Refund policy</a>
+                <a href="/product.html">Privacy policy</a>
+                <a href="/product.html">Terms of service</a>
+                <a href="/product.html">Contact information</a>
+                <a href="/product.html">Cookie preferences</a>
+            </ul>
+        </div>
+        
     </main>
+    <script>
+        const variation = localStorage.getItem('selectedVariation');
+        if (variation ==- null) {
+           window.location.href = 'product.html'
+        } else {
+            document.getElementById('selected-variation-text').textContent = variation;
+        }
+    </script>
 </body>
 </html>
