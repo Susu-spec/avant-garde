@@ -9,7 +9,7 @@ Avant Garde is a minimalistic E-commerce UI built with HTML, CSS and JavaScript.
 ```bash
 git clone https://github.com/Susu-spec/avant-garde-ui.git  
 cd avant-garde 
-Open product.html in a browser
+Open index.html in a browser
 ```
 
 2. Select a product variation.
