@@ -318,6 +318,14 @@ footer {
     border-radius: 2rem;
 }
 
+.mobile-only-display {
+    display: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 56.25rem) {
     .image-section {
         max-width: 100%;
@@ -347,5 +355,9 @@ footer {
 
     .checkout-info-section h1 {
         font-size: 2rem;
+    }
+
+    .mobile-only-display {
+        display: block;
     }
 }
